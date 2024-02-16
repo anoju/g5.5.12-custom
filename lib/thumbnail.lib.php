@@ -198,26 +198,27 @@ function get_view_thumbnail($contents, $thumb_width=0)
             $filepath = dirname($srcfile);
 
             // 썸네일 생성
-            if(!$is_animated)
-                $thumb_file = thumbnail($filename, $filepath, $filepath, $thumb_width, $thumb_height, false);
-            else
+            // if(!$is_animated)
+            //     $thumb_file = thumbnail($filename, $filepath, $filepath, $thumb_width, $thumb_height, false);
+            // else
                 $thumb_file = $filename;
 
             if(!$thumb_file)
                 continue;
 
-            if ($width) {
-                $thumb_tag = '<img src="'.G5_URL.str_replace($filename, $thumb_file, $data_path).'" alt="'.$alt.'" width="'.$width.'" height="'.$height.'"/>';
-            } else {
+            // if ($width) {
+            //     $thumb_tag = '<img src="'.G5_URL.str_replace($filename, $thumb_file, $data_path).'" alt="'.$alt.'" width="'.$width.'" height="'.$height.'"/>';
+            // } else {
                 $thumb_tag = '<img src="'.G5_URL.str_replace($filename, $thumb_file, $data_path).'" alt="'.$alt.'"/>';
-            }
+            //}
             
             // $img_tag에 editor 경로가 있으면 원본보기 링크 추가
-            if(strpos($img_tag, G5_DATA_DIR.'/'.G5_EDITOR_DIR) && preg_match("/\.({$config['cf_image_extension']})$/i", $filename)) {
-                $imgurl = str_replace(G5_URL, "", $src);
-                $attr_href = run_replace('thumb_view_image_href', G5_BBS_URL.'/view_image.php?fn='.urlencode($imgurl), $filename, '', $width, $height, $alt);
-                $thumb_tag = '<a href="'.$attr_href.'" target="_blank" class="view_image">'.$thumb_tag.'</a>';
-            }
+            // if(strpos($img_tag, G5_DATA_DIR.'/'.G5_EDITOR_DIR) && preg_match("/\.({$config['cf_image_extension']})$/i", $filename)) {
+                // $imgurl = str_replace(G5_URL, "", $src);
+                // $attr_href = run_replace('thumb_view_image_href', G5_BBS_URL.'/view_image.php?fn='.urlencode($imgurl), $filename, '', $width, $height, $alt);
+                // $thumb_tag = '<a href="'.$attr_href.'" target="_blank" class="view_image">'.$thumb_tag.'</a>';
+                $thumb_tag = '<div class="view_image">'.$thumb_tag.'</div>';
+            // }
 
             $contents = str_replace($img_tag, $thumb_tag, $contents);
         }

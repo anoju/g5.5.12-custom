@@ -17,7 +17,7 @@ if ( $row['mb_leave_date'] || $row['mb_intercept_date'] ){
 }
 
 // 인증 링크는 한번만 처리가 되게 한다.
-sql_query(" update {$g5['member_table']} set mb_email_certify2 = '' where mb_id = '$mb_id' ");
+sql_query(" update {$g5['member_table']} set mb_email_certify2 = '$mb_md5' where mb_id = '$mb_id' ");
 
 if ($mb_md5)
 {

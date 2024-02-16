@@ -59,7 +59,7 @@ if ($w == '') {
         }
     }
 
-    $title_msg = '글쓰기';
+    $title_msg = '작성';
 } else if ($w == 'u') {
     // 김선용 1.00 : 글쓰기 권한과 수정은 별도로 처리되어야 함
     //if ($member['mb_level'] < $board['bo_write_level']) {
@@ -96,7 +96,7 @@ if ($w == '') {
     if ($board['bo_count_modify'] && $row['cnt'] >= $board['bo_count_modify'] && !$is_admin)
         alert('이 글과 관련된 댓글이 존재하므로 수정 할 수 없습니다.\\n\\n댓글이 '.$board['bo_count_modify'].'건 이상 달린 원글은 수정할 수 없습니다.');
 
-    $title_msg = '글수정';
+    $title_msg = '수정';
 } else if ($w == 'r') {
     if ($member['mb_level'] < $board['bo_reply_level']) {
         if ($member['mb_id'])
@@ -164,7 +164,7 @@ if ($w == '') {
 
     $reply = $reply_array['wr_reply'] . $reply_char;
 
-    $title_msg = '글답변';
+    $title_msg = '답변';
 
     $write['wr_subject'] = 'Re: '.$write['wr_subject'];
 }
@@ -405,7 +405,7 @@ if ($is_use_captcha) {
     $captcha_js   = chk_captcha_js();
 }
 
-$is_dhtml_editor = false;
+$is_dhtml_editor = true;
 $is_dhtml_editor_use = false;
 $editor_content_js = '';
 if(!is_mobile() || defined('G5_IS_MOBILE_DHTML_USE') && G5_IS_MOBILE_DHTML_USE)

@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* 
+ * Nanum Barun Gothic (Korean)
+ */
+/*
+@font-face{
+  font-family:'Nanum Gothic';
+  font-style:normal;
+  font-weight:400;
+  src: url(./font/NanumGothic-Regular.eot);
+  src: url(./font/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(./font/NanumGothic-Regular.woff2) format('woff2'),
+       url(./font/NanumGothic-Regular.woff) format('woff'),
+       url(./font/NanumGothic-Regular.ttf) format('truetype');
+}
+@font-face{
+  font-family:'Nanum Gothic';
+  font-style:normal;
+  font-weight:700;
+  src: url(./font/NanumGothic-Bold.eot);
+  src: url(./font/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),
+       url(./font/NanumGothic-Bold.woff2) format('woff2'),
+       url(./font/NanumGothic-Bold.woff) format('woff'),
+       url(./font/NanumGothic-Bold.ttf) format('truetype');
+}
+@font-face{
+  font-family:'Nanum Gothic';
+  font-style:normal;
+  font-weight:800;
+  src: url(./font/NanumGothic-ExtraBold.eot);
+  src: url(./font/NanumGothic-ExtraBold.eot?#iefix) format('embedded-opentype'),
+       url(./font/NanumGothic-ExtraBold.woff2) format('woff2'),
+       url(./font/NanumGothic-ExtraBold.woff) format('woff'),
+       url(./font/NanumGothic-ExtraBold.ttf) format('truetype');
+}
+*/
+@font-face {
+  font-family: 'Nanum Square';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./font/NanumSquareR.eot);
+  src: local('Nanum Square Regular'),
+       local('NanumSquareR'),
+       url(./font/NanumSquareR.eot?#iefix) format('embedded-opentype'),
+       url(./font/NanumSquareR.woff2) format('woff2'),
+       url(./font/NanumSquareR.woff) format('woff'),
+       url(./font/NanumSquareR.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Nanum Square';
+  font-style: bold;
+  font-weight: 700;
+  src: url(./font/NanumSquareB.eot);
+  src: local('Nanum Square Bold'),
+       local('NanumSquareB'),
+       url(./font/NanumSquareB.eot?#iefix) format('embedded-opentype'),
+       url(./font/NanumSquareB.woff2) format('woff2'),
+       url(./font/NanumSquareB.woff) format('woff'),
+       url(./font/NanumSquareB.ttf) format('truetype');
+}

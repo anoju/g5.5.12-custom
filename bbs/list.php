@@ -11,7 +11,7 @@ if ($board['bo_use_category']) {
     $category_option .= '<li><a href="'.$category_href.'"';
     if ($sca=='')
         $category_option .= ' id="bo_cate_on"';
-    $category_option .= '>전체</a></li>';
+    $category_option .= '>All</a></li>';
 
     $categories = explode('|', $board['bo_category_list']); // 구분자가 , 로 되어 있음
     for ($i=0; $i<count($categories); $i++) {

@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/*@media all and (min-width : 100px) and (max-width : 900px){ /*시작 */
+
+#ListWrap .ListItemWrap {
+	width:100%;
+}
+
+
+	.video-container {
+		padding-top:20px;height:0;overflow:hidden;
+	}
+	.video-container iframe,
+	.video-container object,
+	.video-container embed {
+		width:100%;height:400px;margin:0px auto;
+	}
+
+#V_ITEM .ItemTitle {
+	clear:both;
+}
+
+#V_ITEM .ItemList {
+	clear:both;
+}
+
+
+
+.bo_v_nb {position:relative;margin:20px 0;clear:both;text-align:left}
+.bo_v_nb:after {display:block;visibility:hidden;clear:both;content:""}
+.bo_v_nb li {border-top:1px solid #f1f1f1;height:45px;width:100%;}
+.bo_v_nb li:last-child {border-bottom:1px solid #f1f1f1}
+.bo_v_nb li:hover {background:#f6f6f6}
+.bo_v_nb li a {
+height: 100%;    display: flex;
+color:#8E8E8E;    align-items: center;    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;font-size:13px;}
+.bo_v_nb li .nb_tit {color:#b3b3b3;}
+.bo_v_nb li.btn_prv {float:left;}
+.bo_v_nb li.btn_prv .material-icons-outlined {padding:12px 10px 0px 10px;font-size:20px;color:#b3b3b3}
+.bo_v_nb li.btn_prv .nb_tit {float:left;}
+
+.bo_v_nb li.btn_next {float:left;}
+.bo_v_nb li.btn_next .material-icons-outlined {padding:12px 10px 0px 10px;font-size:20px;color:#b3b3b3}
+.bo_v_nb li.btn_next .nb_tit {float:left;}
+

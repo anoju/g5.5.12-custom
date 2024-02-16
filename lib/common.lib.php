@@ -1521,15 +1521,16 @@ function view_file_link($file, $width, $height, $content='')
 
     // 폭이 있는 경우 폭과 높이의 속성을 주고, 없으면 자동 계산되도록 코드를 만들지 않는다.
     if ($width)
-        $attr = ' width="'.$width.'" height="'.$height.'" ';
+        // $attr = ' width="'.$width.'" height="'.$height.'" ';
+        $attr = '';
     else
         $attr = '';
 
     if (preg_match("/\.({$config['cf_image_extension']})$/i", $file) && isset($board['bo_table'])) {
         $attr_href = run_replace('thumb_view_image_href', G5_BBS_URL.'/view_image.php?bo_table='.$board['bo_table'].'&amp;fn='.urlencode($file), $file, $board['bo_table'], $width, $height, $content);
-        $img = '<a href="'.$attr_href.'" target="_blank" class="view_image">';
-        $img .= '<img src="'.G5_DATA_URL.'/file/'.$board['bo_table'].'/'.urlencode($file).'" alt="'.$content.'" '.$attr.'>';
-        $img .= '</a>';
+        //$img = '<a href="'.$attr_href.'" target="_blank" class="view_image">';
+        $img = '<img src="'.G5_DATA_URL.'/file/'.$board['bo_table'].'/'.urlencode($file).'" alt="'.$content.'" '.$attr.'>';
+        //$img .= '</a>';
 
         return $img;
     }
@@ -3612,8 +3613,7 @@ function check_url_host($url, $msg='', $return_url=G5_URL, $is_redirect=false)
     while ( ( $replace_url = preg_replace(array('/\/{2,}/', '/\\@/'), array('//', ''), urldecode($url)) ) != $url ) {
         $url = $replace_url;
     }
-
-    $p = @parse_url(trim(str_replace('\\', '', $url)));
+    $p = @parse_url(trim($url));
     $host = preg_replace('/:[0-9]+$/', '', $_SERVER['HTTP_HOST']);
     $is_host_check = false;
     
